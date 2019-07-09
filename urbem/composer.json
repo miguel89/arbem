@@ -52,14 +52,6 @@
         "zech86/queue": "dev-master",
         "graylog2/gelf-php": "^1.5"
     },
-    "require-dev": {
-        "sensio/generator-bundle": "^3.0",
-        "phpmd/phpmd": "^2.2",
-        "squizlabs/php_codesniffer": "2.*",
-        "doctrine/migrations": "^1.4",
-        "doctrine/doctrine-migrations-bundle": "*",
-        "doctrine/doctrine-fixtures-bundle": "^2.3"
-    },
     "scripts": {
         "post-install-cmd": [
             "Urbem\\CoreBundle\\Composer\\ScriptHandler::fixDoctrineLoadCollection",
