@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./urbem:/code
+      - ./site.conf:/etc/nginx/conf.d/site.conf
+    networks:
+      - urbem-network
+  app:
+    build: ./app
+    container_name: app
+    volumes:
+      - ./urbem:/var/www/urbem/
+    networks:
+      - urbem-network
+
+networks:
+    urbem-network:
+        driver: bridge
